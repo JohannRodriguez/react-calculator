@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css';
+import ButtonPanel from './ButtonPanel';
 import Display from './Display';
 
 export default class App extends React.Component {
@@ -7,6 +8,7 @@ export default class App extends React.Component {
     return (
       <div className="App">
         <Display />
+        <ButtonPanel />
       </div>
     );
   }
