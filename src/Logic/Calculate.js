@@ -1,12 +1,14 @@
+import operate from './Operate';
+
 const calculate = (data, buttonName) => {
   let { total, next } = data;
   const { operation } = data;
-  console.log(buttonName);
   switch (buttonName) {
     case '+':
     case '-':
     case 'x':
     case '÷':
+      operate(next, operation, buttonName);
       break;
     case '+/-':
       total *= -1;
