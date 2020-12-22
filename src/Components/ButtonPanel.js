@@ -8,7 +8,7 @@ export default function ButtonPanel() {
       {panelData.map(panelData => (
         <div key={panelData.id}>
           {panelData.rowData.map(buttonData => (
-            <Button type="button" key={buttonData.id} name={buttonData.name} symbol={buttonData.symbol} />
+            <Button type="button" key={buttonData.id} name={buttonData.name} />
           ))}
         </div>
       ))}
