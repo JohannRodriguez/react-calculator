@@ -1,20 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default class Display extends React.Component {
-  static defaultProps = {
-    result: '0',
-  }
-
-  static propTypes = {
-    result: PropTypes.string,
-  }
-
-  render() {
-    return(
-      <div className="display">
-        <p>{this.props.result}</p>
-      </div>
-    );
-  }
+function Display(props) {
+  const { result } = props;
+  return (
+    <div className="display">
+      <p>{result}</p>
+    </div>
+  );
 }
+
+Display.defaultProps = {
+  result: '0',
+};
+
+Display.propTypes = {
+  result: PropTypes.string,
+};
+
+export default Display;
