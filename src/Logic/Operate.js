@@ -1,20 +1,24 @@
 import Big from 'big.js';
 
 const operate = (numberOne, numberTwo, operation) => {
-  let total = 0;
-  if (operation === '+') {
-    total = Big(numberOne) + Big(numberTwo);
+  const n1 = new Big(numberOne);
+  const n2 = new Big(numberTwo);
+
+  switch (operation) {
+    case '+':
+      return n1.plus(n2).toString();
+    case '-':
+      return n1.minus(n2).toString();
+    case 'x':
+      return n1.times(n2).toString();
+    case '÷':
+      if (numberTwo === '0') {
+        return null;
+      }
+      return n1.div(n2).toString();
+    default:
+      return null;
   }
-  if (operation === '-') {
-    total = Big(numberOne) - Big(numberTwo);
-  }
-  if (operation === 'x') {
-    total = Big(numberOne) * Big(numberTwo);
-  }
-  if (operation === '÷') {
-    total = Big(numberOne) / Big(numberTwo);
-  }
-  return total;
 };
 
 export default operate;

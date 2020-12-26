@@ -1,25 +1,34 @@
 import operate from './Operate';
 
 const calculate = (data, buttonName) => {
-  let { total, next } = data;
-  const { operation } = data;
+  let { total, next, operation } = data;
   switch (buttonName) {
     case '+':
     case '-':
     case 'x':
     case '÷':
-      operate(next, operation, buttonName);
+      total = next;
+      next = null;
+      operation = buttonName;
       break;
     case '+/-':
-      total *= -1;
-      next *= -1;
+      next = (next * (-1)).toString();
+      break;
+    case '%':
+      next = (next / 100).toString();
+      break;
+    case '=':
+      next = operate(total, next, operation);
+      operation = null;
+      total = null;
       break;
     case 'AC':
-      total = 0;
-      next = 0;
+      total = null;
+      next = null;
+      operation = null;
       break;
     default:
-      total = 'Error';
+      next = next ? next + buttonName : buttonName;
       break;
   }
   return { total, next, operation };
