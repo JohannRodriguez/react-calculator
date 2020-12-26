@@ -1,0 +1,33 @@
+button {
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin: 5px;
+  height: 60px;
+  border-radius: 5px;
+  font: 24px bold;
+}
+
+.dark {
+  background-color: grey;
+}
+
+.dark:hover {
+  background-color: rgb(95, 94, 94);
+}
+
+.bright {
+  background-color: lightgrey;
+}
+
+.bright:hover {
+  background-color: rgb(170, 170, 170);
+}
+
+.light {
+  background-color: lightsteelblue;
+}
+
+.light:hover {
+  background-color: rgb(151, 168, 190);
+}

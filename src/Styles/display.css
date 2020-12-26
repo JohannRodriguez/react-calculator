@@ -1,0 +1,15 @@
+.display {
+  background-color: rgb(228, 81, 81);
+  width: 400px;
+  margin: auto;
+  margin-top: 30px;
+  padding: 10px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  text-align: right;
+  font: 24px bold;
+}
+
+.display p {
+  margin: 10px;
+}
